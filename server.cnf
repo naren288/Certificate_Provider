@@ -1,0 +1,27 @@
+[ req ]
+default_bits = 2048
+distinguished_name = dn
+req_extensions = req_ext
+x509_extensions = v3_ca
+  
+[ dn ]
+CN = <COMMON_NAME>
+CN_default = <COMMON_NAME>
+O =
+O_default =
+OU =
+OU_default =
+L = S
+L_default =
+ST =
+ST_default =
+C = Country
+C_default =
+  
+[ req_ext ]
+subjectAltName = DNS: <COMMON_NAME>
+
+[ v3_ca ]
+basicConstraints = critical,CA:false
+extendedKeyUsage = serverAuth, clientAuth
+keyUsage = critical, digitalSignature, keyEncipherment
